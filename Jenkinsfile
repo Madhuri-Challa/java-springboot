@@ -11,11 +11,6 @@ pipeline {
                 echo 'Test'
             }
         }
-        stage('Sonar Qube') {
-            steps {
-                echo 'done'
-            }
-        }
         stage('Devlopment') {
             steps {
                 echo 'Development'
