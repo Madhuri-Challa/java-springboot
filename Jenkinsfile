@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('build') {
             steps {
@@ -44,6 +44,9 @@ pipeline {
         }
         Failure {
             echo 'Failed'
+        }
+        Always {
+            echo 'Go again'
         }
     }
 }
