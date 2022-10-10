@@ -44,13 +44,14 @@ pipeline {
     }
 
     
-}
 
-post {
-    failure {
+
+    post {
+     failure {
         echo 'Failed'
-    }
-    Success {
+        }
+     Success {
         echo 'Congratulations'
+     }
     }
 }
