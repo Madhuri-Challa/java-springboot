@@ -1,57 +1,50 @@
+
 pipeline {
     agent any
-
     stages {
         stage('build') {
             steps {
-                echo 'Build Completed'
+                echo 'build'
             }
-
         }
-        stage('test') {
+        stage('Test') {
             steps {
-                echo 'Tesing Done'
+                echo 'Test'
             }
-
         }
-        stage('sonar qube') {
+        stage('Sonar Qube') {
             steps {
-                    echo 'Scanning Done'
+                echo 'Scanning done'
             }
-
         }
-        stage('Development') {
+        stage('Devlopment') {
             steps {
-                    echo 'Development Done'
+                echo 'Development'
             }
-        }   
+        }
         stage('QA') {
             steps {
-                echo 'UAT Environment'
+                echo 'RUN UAT'
             }
         }
         stage('Staging') {
             steps {
-                echo 'Staging'
+                echo 'Staged'
             }
         }
         stage('Production') {
             steps {
-                echo 'Production Completed'
+                echo 'Success'
             }
         }
-
     }
-
-    
-
-
-    post {
-     failure {
-        echo 'Failed'
+    post { 
+        Success { 
+            echo 'Congratulations'
         }
-     Success {
-        echo 'Congratulations'
-     }
+        Failure {
+            echo 'Failed'
+        }
     }
 }
+
