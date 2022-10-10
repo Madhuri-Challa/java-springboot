@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Sonar Qube') {
             steps {
-                echo 'Scanning done'
+                echo 'done'
             }
         }
         stage('Devlopment') {
