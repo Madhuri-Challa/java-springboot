@@ -38,10 +38,10 @@ pipeline {
         }
     }
     post { 
-        Success { 
+        success { 
             echo 'Congratulations'
         }
-        Failure {
+        failure {
             echo 'Failed'
         }
     }
