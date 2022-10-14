@@ -41,9 +41,6 @@ pipeline {
         failure {
             echo 'Failed'
         }
-        always {
-            echo 'Go again'
-        }
     }
 }
 
